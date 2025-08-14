@@ -38,7 +38,23 @@ function openRecipe(meal) {
     recipeDetails.innerHTML = `
      <div class = "recipe-modal">
         <h2>${meal.strMeal}</h2>
+        <h3>Ingredients</h3>
+        <ul>${fetchIngredients(meal)}</ul>
      </div>
     `
     recipeDetails.parentElement.style.display = "block";
+}
+
+function fetchIngredients(meal){
+    let ingredientsList = "";
+    for(let i=1; i<=20; i++){
+        const ingre = meal[`strIngredient${i}`];
+        if(ingre){
+            const measure = meal[`strMeasure${i}`];
+            ingredientsList += `<li>${measure} ${ingre}</li>`
+        }else{
+            break;
+        }
+    }
+    return ingredientsList
 }
