@@ -36,8 +36,9 @@ searchForm.addEventListener('submit', function(e){
 
 function openRecipe(meal) {
     recipeDetails.textContent = `
+     <div class = "recipe-modal">
         <h2>${meal.strMeal}</h2>
-        
+     </div>
     `
     recipeDetails.parentElement.style.display = "block";
 }
