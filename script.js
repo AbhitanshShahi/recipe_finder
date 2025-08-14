@@ -1,6 +1,8 @@
 const searchForm = document.querySelector('form');
 const searchedRecipe = document.querySelector('#search');
 const results = document.querySelector('.results');
+const recipeDetails = document.querySelector('.recipe-content');
+const recipeClose = document.querySelector('.close-btn');
 
 
 async function fetchRecipe(input) {
@@ -19,6 +21,9 @@ async function fetchRecipe(input) {
         const button = document.createElement('button');
         button.textContent = "View Recipe";
         recipeDiv.append(button);
+        button.addEventListener('click', function(){
+            openRecipe(meal);
+        })
         results.append(recipeDiv);
     });
 }
@@ -29,3 +34,10 @@ searchForm.addEventListener('submit', function(e){
     fetchRecipe(searchValue);
 })
 
+function openRecipe(meal) {
+    recipeDetails.textContent = `
+        <h2>${meal.strMeal}</h2>
+        
+    `
+    recipeDetails.parentElement.style.display = "block";
+}
