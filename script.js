@@ -36,9 +36,27 @@ searchForm.addEventListener('submit', function(e){
 
 function openRecipe(meal) {
     recipeDetails.textContent = `
-     <div class = "recipe-modal">
-        <h2>${meal.strMeal}</h2>
-     </div>
+     <div class="recipe-modal-container">
+            <div class="modal-header">
+                <h2>${meal.strMeal}</h2>
+                <p class="meal-tags">${meal.strArea} • ${meal.strCategory}</p>
+            </div>
+            <div class="modal-body">
+                <div class="meal-image">
+                    <img src="${meal.strMealThumb}" alt="${meal.strMeal}">
+                </div>
+                <div class="meal-instructions">
+                    <h3>Instructions:</h3>
+                    <p>${meal.strInstructions}</p>
+                </div>
+                <div class="meal-ingredients">
+                    <h3>Ingredients:</h3>
+                    <ul>
+                        ${getIngredientsList(meal)}
+                    </ul>
+                </div>
+            </div>
+        </div>
     `
     recipeDetails.parentElement.style.display = "block";
 }
