@@ -63,11 +63,11 @@ function fetchIngredients(meal){
     return ingredientsList
 }
 recipeClose.addEventListener("click", () => {
-  rulesModal.classList.add("hidden");
+  recipeDetails.parentElement.style.display = "none";
 });
 
 window.addEventListener("click", (e) => {
-  if (e.target === rulesModal) {
-    rulesModal.classList.add("hidden");
+  if (e.target === recipeDetails) {
+    recipeDetails.parentElement.style.display = "none";
   }
 });
