@@ -39,11 +39,11 @@ function openRecipe(meal) {
     <div class = "recipe-modal">
         <h2>${meal.strMeal}</h2>
         <h3>Ingredients</h3>
-        <ul>${fetchIngredients(meal)}</ul>
+        <ul class="IngredientList">${fetchIngredients(meal)}</ul>
     </div>
     <div>
         <h3>Instructions</h3>
-        <p>${meal.strInstructions}</p>
+        <p class="Instructions">${meal.strInstructions}</p>
     </div>
     `
     recipeDetails.parentElement.style.display = "block";
@@ -62,3 +62,12 @@ function fetchIngredients(meal){
     }
     return ingredientsList
 }
+recipeClose.addEventListener("click", () => {
+  rulesModal.classList.add("hidden");
+});
+
+window.addEventListener("click", (e) => {
+  if (e.target === rulesModal) {
+    rulesModal.classList.add("hidden");
+  }
+});
