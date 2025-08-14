@@ -13,9 +13,12 @@ async function fetchRecipe(input) {
         recipeDiv.innerHTML = `
             <img src="${meal.strMealThumb}">
             <h3>${meal.strMeal}</h3>
-            <p>${meal.strArea}</p>
-            <p>${meal.strCategory}</p>
+            <p><span>${meal.strArea}</span>Dish</p>
+            <p>Belong to <span>${meal.strCategory}</span> Category</p>
         `
+        const button = document.createElement('button');
+        button.textContent = "View Recipe";
+        recipeDiv.append(button);
         results.append(recipeDiv);
     });
 }
