@@ -36,11 +36,15 @@ searchForm.addEventListener('submit', function(e){
 
 function openRecipe(meal) {
     recipeDetails.innerHTML = `
-     <div class = "recipe-modal">
+    <div class = "recipe-modal">
         <h2>${meal.strMeal}</h2>
         <h3>Ingredients</h3>
         <ul>${fetchIngredients(meal)}</ul>
-     </div>
+    </div>
+    <div>
+        <h3>Instructions</h3>
+        <p>${meal.strInstructions}</p>
+    </div>
     `
     recipeDetails.parentElement.style.display = "block";
 }
