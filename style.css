@@ -73,7 +73,7 @@ form {
     transform: scale(1.05);
     box-shadow: 0 0 10px rgb(85, 223, 85);
 }
-.results {
+/* .results {
     margin-top: 30px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -102,4 +102,4 @@ form {
     margin-top: 10px;
     font-size: 1.1rem;
     color: #fff;
-}
+} */
