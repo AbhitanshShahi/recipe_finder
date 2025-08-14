@@ -227,7 +227,6 @@ form {
     border-radius: 3px;
 }
 
-/* Responsive for iPhone 12 and similar devices */
 @media (max-width: 400px) {
     .recipe-modal {
         padding: 15px;
@@ -236,12 +235,12 @@ form {
     }
 
     .modal-content {
-        grid-template-columns: 1fr; /* stack ingredients & instructions */
+        grid-template-columns: 1fr; 
         gap: 15px;
     }
 
     .instructions-text {
-        max-height: 40vh; /* shorter scroll area for smaller screens */
+        max-height: 40vh;
     }
 
     .recipe h3 {
@@ -253,6 +252,10 @@ form {
     }
 
     #search {
-        width: 200px; /* search input fits smaller screens */
+        width: 200px; 
+    }
+    ingredients-section ul {
+        columns: 1;
+        list-style-position: inside;
     }
 }
