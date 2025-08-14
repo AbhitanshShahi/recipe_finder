@@ -35,7 +35,7 @@ searchForm.addEventListener('submit', function(e){
 })
 
 function openRecipe(meal) {
-    recipeDetails.textContent = `
+    recipeDetails.innerHTML = `
      <div class = "recipe-modal">
         <h2>${meal.strMeal}</h2>
      </div>
