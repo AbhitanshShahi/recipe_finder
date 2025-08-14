@@ -186,7 +186,7 @@ form {
 .close-btn:hover {
     color: rgb(85, 223, 85);
 }
-/* .recipe-modal{
+.recipe-modal{
     background: #2a2a2a;
     border-radius: 10px;
     padding: 25px;
@@ -196,58 +196,4 @@ form {
     overflow-y: auto;
     border: 1px solid rgb(85, 223, 85);
     box-shadow: 0 0 20px rgba(85, 223, 85, 0.5);
-} */
- .recipe-modal-container {
-    background: #2a2a2a;
-    border-radius: 10px;
-    padding: 25px;
-    max-width: 800px;
-    width: 90%;
-    max-height: 90vh;
-    overflow-y: auto;
-    border: 1px solid rgb(85, 223, 85);
-    box-shadow: 0 0 20px rgba(85, 223, 85, 0.5);
-}
-
-.modal-header {
-    border-bottom: 1px solid #444;
-    padding-bottom: 15px;
-    margin-bottom: 20px;
-}
-
-.modal-header h2 {
-    color: rgb(85, 223, 85);
-    margin-bottom: 5px;
-}
-
-.meal-tags {
-    color: #aaa;
-    font-style: italic;
-}
-
-.modal-body {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-}
-
-.meal-image img {
-    width: 100%;
-    border-radius: 8px;
-    border: 1px solid #444;
-}
-
-.meal-instructions {
-    grid-column: 1 / -1;
-}
-
-.meal-ingredients ul {
-    columns: 2;
-    column-gap: 20px;
-}
-
-.meal-ingredients li {
-    margin-bottom: 8px;
-    color: #d4d4d4;
-    break-inside: avoid;
 }
